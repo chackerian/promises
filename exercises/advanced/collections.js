@@ -10,7 +10,7 @@
 
 
 var combineFirstLineOfManyFiles = function(filePaths, writePath) {
- // TODO
+  // TODO
 };
 
 // Export these functions so we can unit test them

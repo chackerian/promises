@@ -49,7 +49,7 @@ describe('Basic chaining', function() {
           expect(profile.id).to.equal(6980359);
           done();
         })
-        .catch(done);
+        .catch(function() { done(); });
     });
 
     afterEach(function() {

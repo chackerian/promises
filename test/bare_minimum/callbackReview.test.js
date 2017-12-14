@@ -58,7 +58,6 @@ describe('Callback review', function() {
 
     it('should invoke the callback with an error as the first argument', function(done) {
       someNonExistantWebsite.get('/').reply(404);
-
       getStatusCode('https::///thisIsNoUrl.comedy', function(err, statusCode) {
         expect(err.message).to.contain('Invalid URI');
         expect(statusCode).to.not.exist;

@@ -35,7 +35,7 @@ describe('Promisification', function() {
           expect(profile.id).to.equal(12345);
           done();
         })
-        .catch(done);
+        .catch(function() { done(); });
     });
 
     it('should make any errors available in the `catch` block', function(done) {
@@ -72,7 +72,7 @@ describe('Promisification', function() {
           expect(token).to.have.length(40);
           done();
         })
-        .catch(done);
+        .catch(function() { done(); });
     });
 
   });
@@ -93,7 +93,7 @@ describe('Promisification', function() {
           });
           done();
         })
-        .catch(done);
+        .catch(function() { done(); });
     });
 
     it('should make any errors available in the `catch` block', function(done) {

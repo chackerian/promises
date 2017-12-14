@@ -67,7 +67,7 @@ describe('Promise constructor', function() {
           expect(statusCode).to.be.a('number');
           done();
         })
-        .catch(done);
+        .catch( function() { done(); });
     });
 
     it('should make the status code available in the `then` block', function(done) {
@@ -78,7 +78,7 @@ describe('Promise constructor', function() {
           expect(statusCode).to.equal(200);
           done();
         })
-        .catch(done);
+        .catch(function() { done(); });
     });
 
     it('should make any errors available in the `catch` block', function(done) {
